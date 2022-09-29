@@ -2,11 +2,12 @@ import React, { useRef } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { Data } from "./TestimonialData";
+
 import "./TestimonialCarousel.css";
 import { Avatar } from "@mui/material";
 import EastIcon from "@mui/icons-material/East";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
+import { Data } from "./CarouselData";
 
 // Remove Default slider arrow button
 

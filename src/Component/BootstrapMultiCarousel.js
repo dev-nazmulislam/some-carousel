@@ -28,6 +28,40 @@ const NextBtn = (props) => {
   );
 };
 
+const carouselPropertise = {
+  autoplay: true,
+  autoplaySpeed: 3000,
+  slidesToShow: 4,
+  slidesToScroll: 2,
+  prevArrow: <PreviousBtn />,
+  nextArrow: <NextBtn />,
+
+  //  Responsive Propertise
+  responsive: [
+    {
+      breakpoint: 426,
+      settings: {
+        slidesToShow: 1,
+        centerMode: false,
+      },
+    },
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 2,
+        centerMode: false,
+      },
+    },
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 3,
+        centerMode: false,
+      },
+    },
+  ],
+};
+
 const BootstrapMultiCarousel = () => {
   return (
     <div
@@ -36,15 +70,7 @@ const BootstrapMultiCarousel = () => {
     >
       <div style={{ width: "80%" }}>
         <h1 className="text-2xl my-5">Bootstrap Multi Carousel</h1>
-        <Slider
-          autoplay
-          autoplaySpeed={2000}
-          dots
-          prevArrow={<PreviousBtn />}
-          nextArrow={<NextBtn />}
-          slidesToShow={4}
-          slidesToScroll={2}
-        >
+        <Slider {...carouselPropertise}>
           {MultiImages.map((item) => {
             return <Card item={item} />;
           })}

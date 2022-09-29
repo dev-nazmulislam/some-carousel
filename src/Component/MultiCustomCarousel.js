@@ -5,6 +5,38 @@ import Slider from "react-slick";
 import { MultiImages } from "./CarouselData";
 import { ArrowBackIos, ArrowForwardIos } from "@mui/icons-material";
 
+const carouselPropertise = {
+  autoplay: true,
+  autoplaySpeed: 3000,
+  slidesToShow: 4,
+  slidesToScroll: 2,
+
+  //  Responsive Propertise
+  responsive: [
+    {
+      breakpoint: 426,
+      settings: {
+        slidesToShow: 1,
+        centerMode: false,
+      },
+    },
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 2,
+        centerMode: false,
+      },
+    },
+    {
+      breakpoint: 1025,
+      settings: {
+        slidesToShow: 3,
+        centerMode: false,
+      },
+    },
+  ],
+};
+
 const MultiCustomCarousel = () => {
   const sliderRef = useRef(null);
   return (
@@ -13,13 +45,7 @@ const MultiCustomCarousel = () => {
         <h1 className="text-2xl my-5">
           Multi Item Carousel With Custom Controler
         </h1>
-        <Slider
-          ref={sliderRef}
-          autoplay
-          autoplaySpeed={2000}
-          slidesToShow={4}
-          slidesToScroll={2}
-        >
+        <Slider ref={sliderRef} {...carouselPropertise}>
           {MultiImages.map((item) => {
             return (
               <div style={{ margin: "10px" }}>
