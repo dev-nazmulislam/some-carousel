@@ -1,0 +1,47 @@
+.testimonial .slick-arrow.slick-prev,
+.testimonial .slick-arrow.slick-next {
+  width: 47px;
+  height: 104px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.slick-prev::before,
+.slick-next::before {
+  display: none;
+}
+
+.testimonial .slick-prev {
+  left: -70px;
+}
+.testimonial .slick-next {
+  right: -70px;
+}
+.testimonial .slick-dots li button::before {
+  font-size: 20px;
+}
+.testimonial .slick-dots li {
+  top: 15px;
+}
+
+.custom-scrollbar {
+  height: 160px;
+  scrollbar-width: 0.5vh;
+  scrollbar-color: #777;
+  padding: 5px;
+  color: gray;
+  text-align: left;
+  overflow-y: scroll;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 0.5vw;
+  border-radius: 15px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #7775;
+  border-radius: 15px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #777;
+}
